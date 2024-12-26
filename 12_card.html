@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+
+
+
+    <style>
+        div{
+            border:solid 1px black;
+        }
+
+        .card{
+            width:300px;
+            height:600px;
+        }
+
+        .img-box{
+            /* width는 부모의 300px이 적용되어 있음 */
+            height:300px;
+            border-radius: 10px;
+            /* 모서리 바깥으로 삐져나온 이미지 숨기기 */
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .prod-img{
+            width: 300px;
+            height: 300px;
+            
+        }
+        
+        .like-box{
+            position: absolute;
+            right:20px;
+            bottom:20px;
+
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: #00000070;
+
+            /* 내부 요소 중앙 정렬 */
+
+            display: flex;
+            justify-content:center
+            
+        }
+
+        .like{
+            width: 30px;
+            height: 30px;
+
+            filter: contrast(0%) brightness(500%);
+            
+        }
+
+        .count-box{
+            display: flex;
+            margin-top: 5px;
+        }
+
+        /* count-box 내 첫번째 div와세번째 div에 스타일 적용 */
+
+        .count-box > div:nth-child(1), .count-box > div:nth-child(3){
+            width:30%;
+        }
+        
+        /* count-box 내 두번째 div에 스타일 적용 */
+        .count-box > div:nth-child(2){
+            width:40%;
+        }
+
+        /* count-box 내 모든 자식 div에 스타일 적용 */
+        .count-box > div{
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 5px;
+        }
+
+        .content-box{
+        }
+
+        .sale{
+            background-color: red;
+            color: white;
+            position:absolute;
+            padding:2px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+
+
+
+    </style>
+
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+    <div class="card">
+        <div class="img-box">
+            <img class="prod-img" src="https://shop-phinf.pstatic.net/20220112_215/1641954277382qQuhA_JPEG/49418973495969332_2055290274.jpg?type=f450" alt="">
+            <div class="like-box">
+                <img class="like" src="https://cdn2.iconfinder.com/data/icons/media-player-ui/512/Media-Icon-25-512.png" alt="">
+            </div>
+        </div>
+
+        <div class="count-box">
+            <div>-</div>
+            <div>0</div>
+            <div>+</div>
+         </div>
+    
+         <div class="content-box">
+            <div class="sale">전단행사</div>
+        
+         </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>    
+
+
+
+
+
+
+
+    
+</body>
+</html>
