@@ -47,7 +47,7 @@
             text-align: center;
         }
 
-            .btn{
+        .btn{
             position:absolute;
             /* 수평 정렬 */
             left: 50%;
@@ -183,16 +183,30 @@
         .quick-nav{
             position: fixed;
             right:0;
-            
             top:50%;
             transform:translate(0, -50%);
+            display: block;
+            font-size:0;
         }
 
         .quick-menu{
-            width: 100px;
-            height: 100px;
+            display:flex;
+            flex-direction: column;
             
         }
+
+        .quick-menu img{
+            width:100px;
+            cursor:pointer;
+            border:1px solid #2c2c2c32;
+            transition:0.2s;
+        }
+
+        .quick-menu img:hover{
+            background-color: #f79116;
+            color: #fff;
+        }
+
     </style>
         
 </head>
@@ -243,29 +257,9 @@
             <h1>미래융합교육원의 교육과정에 대해</h1>
             <h1>더 자세히 상담을 받아보세요</h1>
         </div>
-        <div class="btn">실시간 상담하기</div>
-    </div>
-    
-    <!-- 부모 -->
-    <div class="banner">
-        <img src="https://cdn.imweb.me/thumbnail/20230713/2487d7b4959c6.jpg" alt="">
-        <!-- 자식 -->
-        <div class="text">
-            <h1>미래융합교육원의 교육과정에 대해</h1>
-            <h1>더 자세히 상담을 받아보세요</h1>
-        </div>
-        <div class="btn">실시간 상담하기</div>
-    </div>
-    <!-- 부모 -->
-    <div class="banner">
-        <img src="https://cdn.imweb.me/thumbnail/20230713/2487d7b4959c6.jpg" alt="">
-        <!-- 자식 -->
-        <div class="text">
-            <h1>미래융합교육원의 교육과정에 대해</h1>
-            <h1>더 자세히 상담을 받아보세요</h1>
-        </div>
         <div class="btn" ref="http://www.naver.com">실시간 상담하기</div>
     </div>
+
     <!-- 상단 네비게이션 바 -->
     <div class="navigation">
         <div>
@@ -288,7 +282,7 @@
                 <a href="">과정안내</a>
                 <div class="dropdown">
                     <a href="">교육과정 소개</a>
-                    <a href="">교육일정정</a>
+                    <a href="">교육일정</a>
                 </div>
             </div>
             <div>
@@ -300,7 +294,7 @@
             <div>
                 <a href="">상담센터</a>
             </div>
-            <div
+            <div>
                 <a href="">커뮤니티</a>
             </div>
         </div>
@@ -320,9 +314,15 @@
     </div>
     <div class="quick-nav">
         <div class="quick-menu">
-            <div>질문&답변</div>
-            <div>카카오톡 상담</div>
-            <div>대표번호</div>
+            <a href="https://mcea.co.kr/sub6-3">
+                <img src="https://cdn.imweb.me/upload/S2023070315976c924cb4e/2b403dcb49bac.png" alt="">
+            </a>
+            <a href="https://pf.kakao.com/_csYdG/chat">
+                <img src="https://cdn.imweb.me/upload/S2023070315976c924cb4e/73126d44c860c.png" alt="">
+            </a>
+            <a href="https://mcea.co.kr/sub1-5">
+                <img src="https://cdn.imweb.me/upload/S2023070315976c924cb4e/8fff93ea8148f.png" alt="">
+            </a>
         </div>
 
     </div>
