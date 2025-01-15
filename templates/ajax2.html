@@ -1,0 +1,27 @@
+{% extends "base.html"%}
+{% block contents %}
+
+<script>
+    $SCRIPT_ROOT = {{ request.script_root | tojson }}; // request.script_root : 주소제공    / tojson : 형변환 |, pipe 기호호
+    $(function () { // jQuery  자바스크립트를 편리하고 간단하게 
+        // calcurate 이름을 가진 객체에 click이벤트를 설치
+        $('a#calcurate').bind('click', function () { // click 이벤트 -> event-handler 함수 실행 
+            $.getJSON($SCRIPT_ROOT + ' /_multi_numbers', {
+                a: $('input[name="a"]').val(),
+                b: $('input[name="b"]').val()
+                
+            }, function (data) { // json 키이:데이터
+                $("#result").text(data.result); // 데이터 결과값을 result = 키 에 넣음
+            });
+            return false;
+        });
+    });
+</script>
+<h1>jQeury 예</h1>
+<p><input type="text" name="a" size=5> X 
+    <input type="text" name="b" size=5> =
+    <span id=result> ? </span>
+</p>
+<p><a href=# id=calcurate>서버에서 계산</a></p>
+
+{% endblock contents %}

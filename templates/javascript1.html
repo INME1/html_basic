@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block explain_contents %}
+<p> 
+    <center>
+        <h1><input type="text" name="txt" id="txt" value=""
+            size ="2"
+            style ="font-size:20px">초후에 daum.net으로 이동.</h1>
+    </center>
+</p>
+<Script Lauguage="JavaScript">
+    cnt = 3;
+    txt = document.getElementById("txt")
+    function setT() { 
+        Time_id2 = setInterval("move()", 1000) 
+    }
+    function move() {
+        if (cnt > 0) { cnt--; txt.value = cnt;}
+        else {
+            clearInterval(Time_id2);
+            location.href = "http://localhost:5000";
+        }
+    }
+    Window.onload = setT(); //function() { setT();}
+</Script>
+
+{% endblock explain_contents %}
+
+
